@@ -17,4 +17,7 @@ response = co.generate(
   k=0,
   stop_sequences=[],
   return_likelihoods='NONE')
-print('Prediction: {}'.format(response.generations[0].text))
+idea = 'Here is a great idea for a movie: {}'.format(response.generations[0].text)
+# Front End Now
+st.text("Welcome to the Movie Idea Generator a Random Movie Idea will Appear Below!!!")
+st.write(idea)
